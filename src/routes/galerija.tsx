@@ -27,8 +27,13 @@ const images = [
 function Galerija() {
   return (
     <div>
-      <section className="py-32 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute top-20 left-10 w-48 h-48 bg-flora-green/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-flora-gold/5 rounded-full blur-3xl" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <div className="inline-block bg-flora-green/10 text-flora-green text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-6 border border-flora-green/20">
+            📸 Naša ponuda
+          </div>
           <h1 className="font-serif text-4xl md:text-6xl text-flora-forest mb-6">Galerija</h1>
           <p className="text-muted-foreground text-lg font-light">
             Pogledajte izbor iz naše ponude sadnica i cvijeća
@@ -37,15 +42,21 @@ function Galerija() {
       </section>
 
       <section className="pb-24 px-6">
-        <div className="max-w-6xl mx-auto columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div className="max-w-6xl mx-auto columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
           {images.map((image, i) => (
-            <div key={i} className="break-inside-avoid overflow-hidden rounded-xl">
+            <div
+              key={i}
+              className="group break-inside-avoid overflow-hidden rounded-3xl relative"
+            >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-flora-forest/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                <p className="text-flora-cream text-sm font-medium">{image.alt}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,6 +1,8 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { DeliveryCountdown } from "../components/DeliveryCountdown";
+import { FloatingOrderWidget } from "../components/FloatingOrderWidget";
 
 import appCss from "../styles.css?url";
 
@@ -16,7 +18,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105"
           >
             Povratak na početnu
           </Link>
@@ -65,11 +67,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <>
+      <DeliveryCountdown />
       <Header />
       <main className="pt-[72px]">
         <Outlet />
       </main>
       <Footer />
+      <FloatingOrderWidget />
     </>
   );
 }
