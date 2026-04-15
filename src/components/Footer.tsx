@@ -29,7 +29,7 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             <a
-              href="https://instagram.com/floravu"
+              href="https://www.instagram.com/flora.vukovar/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-flora-cream/70 hover:text-flora-cream transition-colors text-sm"
@@ -37,7 +37,7 @@ export function Footer() {
               Instagram
             </a>
             <a
-              href="https://facebook.com/floravu"
+              href="https://www.facebook.com/profile.php?id=61575743498498"
               target="_blank"
               rel="noopener noreferrer"
               className="text-flora-cream/70 hover:text-flora-cream transition-colors text-sm"

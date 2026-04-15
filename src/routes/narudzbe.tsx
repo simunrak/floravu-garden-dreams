@@ -28,7 +28,7 @@ function Narudzbe() {
         <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
           {/* Instagram */}
           <a
-            href="https://instagram.com/floravu"
+            href="https://www.instagram.com/flora.vukovar/"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-flora-sage-light rounded-2xl p-10 text-center hover:shadow-lg transition-all duration-300"
@@ -41,13 +41,13 @@ function Narudzbe() {
             <h2 className="font-serif text-2xl text-flora-forest mb-3">Instagram</h2>
             <p className="text-muted-foreground text-sm mb-4">Pratite nas i naručite putem poruke</p>
             <span className="inline-block text-flora-terracotta text-sm font-medium group-hover:underline">
-              @floravu →
+              @flora.vukovar →
             </span>
           </a>
 
           {/* Facebook */}
           <a
-            href="https://facebook.com/floravu"
+            href="https://www.facebook.com/profile.php?id=61575743498498"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-flora-terracotta-light rounded-2xl p-10 text-center hover:shadow-lg transition-all duration-300"
