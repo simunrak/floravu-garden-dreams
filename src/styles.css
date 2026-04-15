@@ -53,6 +53,33 @@
   --color-flora-gold-light: var(--flora-gold-light);
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-blob: blob 7s infinite;
+  --animate-bounce-slow: bounce-slow 3s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-15px) rotate(1deg); }
+    66% { transform: translateY(-8px) rotate(-1deg); }
+  }
+
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
 }
 
 :root {
@@ -90,7 +117,7 @@
   --sidebar-border: oklch(0.85 0.02 95 / 50%);
   --sidebar-ring: oklch(0.62 0.14 90);
 
-  /* FloraVu brand tokens — matched to logo */
+  /* FloraVu brand tokens */
   --flora-green: oklch(0.48 0.10 148);
   --flora-gold: oklch(0.62 0.14 90);
   --flora-cream: oklch(0.97 0.008 95);
@@ -155,4 +182,33 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
   }
+}
+
+/* Custom cursor */
+.flora-cursor,
+.flora-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%234a7c59'%3E%3Cpath d='M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 8.56-6.27 9-12z'/%3E%3C/svg%3E") 4 4, auto;
+}
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: oklch(0.97 0.008 95 / 60%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid oklch(0.62 0.14 90 / 15%);
+  box-shadow: 0 8px 32px oklch(0.25 0.06 148 / 8%);
+}
+
+.dark .glass-card {
+  background: oklch(0.25 0.05 145 / 60%);
+  border: 1px solid oklch(1 0 0 / 8%);
+  box-shadow: 0 8px 32px oklch(0 0 0 / 20%);
+}
+
+/* Animation delay utilities */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
