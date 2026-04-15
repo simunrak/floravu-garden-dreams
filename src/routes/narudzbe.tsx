@@ -41,7 +41,7 @@ function Narudzbe() {
             <h2 className="font-serif text-2xl text-flora-forest mb-3">Instagram</h2>
             <p className="text-muted-foreground text-sm mb-4">Pratite nas i naručite putem poruke</p>
             <span className="inline-block text-flora-terracotta text-sm font-medium group-hover:underline">
-              @floravu →
+              @flora.vukovar →
             </span>
           </a>
 
