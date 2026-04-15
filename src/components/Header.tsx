@@ -14,11 +14,17 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-flora-cream/90 backdrop-blur-md border-b border-flora-sage/10">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="FloraVu logo" className="h-10 w-10" />
-          <span className="font-serif text-2xl text-flora-forest tracking-tight">FloraVu</span>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-flora-cream/90 backdrop-blur-md border-b border-flora-gold/15">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logo}
+            alt="FloraVu logo"
+            className="h-12 w-12 transition-transform group-hover:scale-105"
+          />
+          <span className="font-serif text-2xl text-flora-forest tracking-tight hidden sm:inline">
+            FloraVu
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -27,8 +33,8 @@ export function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-sm text-flora-forest/70 hover:text-flora-forest transition-colors"
-              activeProps={{ className: "text-sm text-flora-terracotta font-medium" }}
+              className="text-sm text-flora-forest/60 hover:text-flora-gold transition-colors tracking-wide"
+              activeProps={{ className: "text-sm text-flora-gold font-medium tracking-wide" }}
             >
               {link.label}
             </Link>
@@ -49,13 +55,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-flora-cream/95 backdrop-blur-md border-t border-flora-sage/10 px-6 py-6 flex flex-col gap-4">
+        <nav className="md:hidden bg-flora-cream/95 backdrop-blur-md border-t border-flora-gold/15 px-6 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="text-flora-forest/70 hover:text-flora-forest transition-colors text-lg font-serif"
-              activeProps={{ className: "text-flora-terracotta text-lg font-serif" }}
+              className="text-flora-forest/60 hover:text-flora-gold transition-colors text-lg font-serif"
+              activeProps={{ className: "text-flora-gold text-lg font-serif" }}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
