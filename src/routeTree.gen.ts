@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RadnoVrijemeRouteImport } from './routes/radno-vrijeme'
+import { Route as ONamaRouteImport } from './routes/o-nama'
+import { Route as NarudzbeRouteImport } from './routes/narudzbe'
+import { Route as GalerijaRouteImport } from './routes/galerija'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RadnoVrijemeRoute = RadnoVrijemeRouteImport.update({
+  id: '/radno-vrijeme',
+  path: '/radno-vrijeme',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ONamaRoute = ONamaRouteImport.update({
+  id: '/o-nama',
+  path: '/o-nama',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NarudzbeRoute = NarudzbeRouteImport.update({
+  id: '/narudzbe',
+  path: '/narudzbe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerijaRoute = GalerijaRouteImport.update({
+  id: '/galerija',
+  path: '/galerija',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,78 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/galerija': typeof GalerijaRoute
+  '/narudzbe': typeof NarudzbeRoute
+  '/o-nama': typeof ONamaRoute
+  '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/galerija': typeof GalerijaRoute
+  '/narudzbe': typeof NarudzbeRoute
+  '/o-nama': typeof ONamaRoute
+  '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/galerija': typeof GalerijaRoute
+  '/narudzbe': typeof NarudzbeRoute
+  '/o-nama': typeof ONamaRoute
+  '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/galerija' | '/narudzbe' | '/o-nama' | '/radno-vrijeme'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/galerija' | '/narudzbe' | '/o-nama' | '/radno-vrijeme'
+  id:
+    | '__root__'
+    | '/'
+    | '/galerija'
+    | '/narudzbe'
+    | '/o-nama'
+    | '/radno-vrijeme'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GalerijaRoute: typeof GalerijaRoute
+  NarudzbeRoute: typeof NarudzbeRoute
+  ONamaRoute: typeof ONamaRoute
+  RadnoVrijemeRoute: typeof RadnoVrijemeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/radno-vrijeme': {
+      id: '/radno-vrijeme'
+      path: '/radno-vrijeme'
+      fullPath: '/radno-vrijeme'
+      preLoaderRoute: typeof RadnoVrijemeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-nama': {
+      id: '/o-nama'
+      path: '/o-nama'
+      fullPath: '/o-nama'
+      preLoaderRoute: typeof ONamaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/narudzbe': {
+      id: '/narudzbe'
+      path: '/narudzbe'
+      fullPath: '/narudzbe'
+      preLoaderRoute: typeof NarudzbeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerija': {
+      id: '/galerija'
+      path: '/galerija'
+      fullPath: '/galerija'
+      preLoaderRoute: typeof GalerijaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +127,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GalerijaRoute: GalerijaRoute,
+  NarudzbeRoute: NarudzbeRoute,
+  ONamaRoute: ONamaRoute,
+  RadnoVrijemeRoute: RadnoVrijemeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
