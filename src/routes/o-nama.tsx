@@ -15,7 +15,6 @@ export const Route = createFileRoute("/o-nama")({
 function ONama() {
   return (
     <div>
-      {/* Hero */}
       <section className="relative py-32 px-6 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -31,7 +30,6 @@ function ONama() {
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
@@ -57,8 +55,7 @@ function ONama() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="bg-flora-sage-light py-20 px-6">
+      <section className="bg-flora-green-light py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-3xl text-flora-forest text-center mb-16">Zašto FloraVu?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -68,7 +65,7 @@ function ONama() {
               { title: "Stručnost", desc: "Savjetujemo vas pri odabiru biljaka za vaš vrt." },
               { title: "Dostupnost", desc: "Brza dostava istog ili sljedećeg dana." },
             ].map((item) => (
-              <div key={item.title} className="bg-background/60 backdrop-blur-sm rounded-xl p-8">
+              <div key={item.title} className="bg-background/60 backdrop-blur-sm rounded-xl p-8 border border-flora-gold/10">
                 <h3 className="font-serif text-xl text-flora-forest mb-3">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
