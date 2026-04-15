@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/" as const, label: "Početna" },
@@ -15,8 +16,9 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-flora-cream/90 backdrop-blur-md border-b border-flora-sage/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-serif text-2xl text-flora-forest tracking-tight">
-          FloraVu
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="FloraVu logo" className="h-10 w-10" />
+          <span className="font-serif text-2xl text-flora-forest tracking-tight">FloraVu</span>
         </Link>
 
         {/* Desktop nav */}
