@@ -67,7 +67,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <>
-      <DeliveryCountdown />
       <Header />
       <main className="pt-[72px]">
         <Outlet />
