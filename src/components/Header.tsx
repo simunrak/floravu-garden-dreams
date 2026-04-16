@@ -67,7 +67,7 @@ export function Header() {
                 className="text-[0.82rem] font-medium text-flora-forest/50 px-3.5 py-1.5 rounded-full transition-all duration-300 hover:text-flora-forest hover:bg-flora-forest/[0.04]"
                 activeProps={{
                   className:
-                    "text-[0.82rem] font-semibold text-flora-cream px-3.5 py-1.5 rounded-full bg-flora-forest shadow-sm",
+                    "text-[0.82rem] font-semibold text-flora-forest px-3.5 py-1.5 rounded-full bg-flora-gold/20 border border-flora-gold/30",
                 }}
               >
                 {link.label}
