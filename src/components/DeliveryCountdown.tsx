@@ -41,10 +41,10 @@ export function DeliveryCountdown() {
   if (!timeLeft) return null;
 
   return (
-    <div className="bg-gradient-to-r from-flora-green via-flora-forest to-flora-green text-flora-cream text-center py-2.5 px-4 text-sm font-medium tracking-wide animate-pulse-subtle">
+    <div className="bg-flora-forest text-flora-cream text-center py-1.5 px-4 text-xs font-medium tracking-wide">
       <span className="inline-flex items-center gap-2">
         🌿 Naručite u idućih{" "}
-        <span className="bg-flora-cream/20 backdrop-blur-sm rounded-full px-2.5 py-0.5 font-bold tabular-nums">
+        <span className="bg-flora-cream/15 rounded-full px-2 py-0.5 font-bold tabular-nums text-flora-gold">
           {timeLeft.hours}h {String(timeLeft.minutes).padStart(2, "0")}min
         </span>{" "}
         za dostavu danas!
