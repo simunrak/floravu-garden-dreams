@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { DeliveryCountdown } from "../components/DeliveryCountdown";
+
 import { FloatingOrderWidget } from "../components/FloatingOrderWidget";
 
 import appCss from "../styles.css?url";
