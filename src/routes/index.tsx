@@ -66,7 +66,7 @@ function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-100"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80')",
+            backgroundImage: `url(${heroBg})`,
             transform: `translateY(${heroParallax.offset}px)`,
           }}
         />
