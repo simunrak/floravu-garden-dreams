@@ -1,4 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
@@ -65,6 +65,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const location = useRouterState({ select: (s) => s.location });
+  const isOrderPage = location.pathname === "/order";
+
+  if (isOrderPage) {
+    return <Outlet />;
+  }
+
   return (
     <>
       <Header />

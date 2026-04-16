@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RadnoVrijemeRouteImport } from './routes/radno-vrijeme'
+import { Route as OrderRouteImport } from './routes/order'
 import { Route as ONamaRouteImport } from './routes/o-nama'
 import { Route as NarudzbeRouteImport } from './routes/narudzbe'
 import { Route as GalerijaRouteImport } from './routes/galerija'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const RadnoVrijemeRoute = RadnoVrijemeRouteImport.update({
   id: '/radno-vrijeme',
   path: '/radno-vrijeme',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderRoute = OrderRouteImport.update({
+  id: '/order',
+  path: '/order',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ONamaRoute = ONamaRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/galerija': typeof GalerijaRoute
   '/narudzbe': typeof NarudzbeRoute
   '/o-nama': typeof ONamaRoute
+  '/order': typeof OrderRoute
   '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/galerija': typeof GalerijaRoute
   '/narudzbe': typeof NarudzbeRoute
   '/o-nama': typeof ONamaRoute
+  '/order': typeof OrderRoute
   '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRoutesById {
@@ -61,19 +69,27 @@ export interface FileRoutesById {
   '/galerija': typeof GalerijaRoute
   '/narudzbe': typeof NarudzbeRoute
   '/o-nama': typeof ONamaRoute
+  '/order': typeof OrderRoute
   '/radno-vrijeme': typeof RadnoVrijemeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/galerija' | '/narudzbe' | '/o-nama' | '/radno-vrijeme'
+  fullPaths:
+    | '/'
+    | '/galerija'
+    | '/narudzbe'
+    | '/o-nama'
+    | '/order'
+    | '/radno-vrijeme'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/galerija' | '/narudzbe' | '/o-nama' | '/radno-vrijeme'
+  to: '/' | '/galerija' | '/narudzbe' | '/o-nama' | '/order' | '/radno-vrijeme'
   id:
     | '__root__'
     | '/'
     | '/galerija'
     | '/narudzbe'
     | '/o-nama'
+    | '/order'
     | '/radno-vrijeme'
   fileRoutesById: FileRoutesById
 }
@@ -82,6 +98,7 @@ export interface RootRouteChildren {
   GalerijaRoute: typeof GalerijaRoute
   NarudzbeRoute: typeof NarudzbeRoute
   ONamaRoute: typeof ONamaRoute
+  OrderRoute: typeof OrderRoute
   RadnoVrijemeRoute: typeof RadnoVrijemeRoute
 }
 
@@ -92,6 +109,13 @@ declare module '@tanstack/react-router' {
       path: '/radno-vrijeme'
       fullPath: '/radno-vrijeme'
       preLoaderRoute: typeof RadnoVrijemeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/order': {
+      id: '/order'
+      path: '/order'
+      fullPath: '/order'
+      preLoaderRoute: typeof OrderRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/o-nama': {
@@ -130,6 +154,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalerijaRoute: GalerijaRoute,
   NarudzbeRoute: NarudzbeRoute,
   ONamaRoute: ONamaRoute,
+  OrderRoute: OrderRoute,
   RadnoVrijemeRoute: RadnoVrijemeRoute,
 }
 export const routeTree = rootRouteImport
