@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { DeliveryCountdown } from "../components/DeliveryCountdown";
+
 import { FloatingOrderWidget } from "../components/FloatingOrderWidget";
 
 import appCss from "../styles.css?url";
@@ -67,9 +67,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <>
-      <DeliveryCountdown />
       <Header />
-      <main className="pt-[72px]">
+      <main className="pt-[104px]">
         <Outlet />
       </main>
       <Footer />
