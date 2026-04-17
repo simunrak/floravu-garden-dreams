@@ -23,7 +23,7 @@ export function OrderForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (selected.length === 0) {
-      setErrorMsg("Please select at least one flower.");
+      setErrorMsg("Molimo odaberite barem jedan cvijet.");
       return;
     }
     setErrorMsg("");
@@ -55,12 +55,12 @@ export function OrderForm() {
         const data = await res.json();
         const msg =
           data?.errors?.map((e: { message: string }) => e.message).join(", ") ||
-          "Something went wrong. Please try again.";
+          "Nešto je pošlo po zlu. Molimo pokušajte ponovno.";
         setErrorMsg(msg);
         setStatus("error");
       }
     } catch {
-      setErrorMsg("Network error. Please check your connection and try again.");
+      setErrorMsg("Greška mreže. Provjerite internetsku vezu i pokušajte ponovno.");
       setStatus("error");
     }
   };
