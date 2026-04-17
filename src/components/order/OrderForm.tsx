@@ -271,14 +271,14 @@ export function OrderForm() {
               {/* Optional note */}
               <div className="mb-10">
                 <label className={labelClass} style={labelStyle} htmlFor="note">
-                  Additional Notes (optional)
+                  Dodatne napomene (neobavezno)
                 </label>
                 <textarea
                   id="note"
                   name="note"
                   rows={3}
                   maxLength={1000}
-                  placeholder="Delivery address, card message, special requests..."
+                  placeholder="Adresa dostave, poruka na čestitki, posebne želje..."
                   className={inputClass}
                   style={{ ...inputStyle, resize: "none" }}
                 />
@@ -306,11 +306,11 @@ export function OrderForm() {
                   boxShadow: "0 6px 30px rgba(61,90,62,0.3)",
                 }}
               >
-                {status === "sending" ? "Sending..." : "Order Now"}
+                {status === "sending" ? "Šaljem..." : "Naruči odmah"}
               </button>
 
               <p className="text-xs text-center mt-4" style={{ color: "#9a8a80" }}>
-                Your order will be sent to our team. We'll confirm within 30 minutes.
+                Vaša narudžba bit će poslana našem timu. Potvrdit ćemo unutar 30 minuta.
               </p>
             </form>
           </div>
