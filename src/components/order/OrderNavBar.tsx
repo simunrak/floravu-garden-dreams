@@ -13,10 +13,10 @@ export function OrderNavBar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/galerija", label: "Collections" },
-    { href: "/order", label: "Order Now", active: true },
-    { href: "/radno-vrijeme", label: "Contact" },
+    { href: "/", label: "Početna" },
+    { href: "/galerija", label: "Galerija" },
+    { href: "/order", label: "Naručite", active: true },
+    { href: "/radno-vrijeme", label: "Kontakt" },
   ];
 
   return (
