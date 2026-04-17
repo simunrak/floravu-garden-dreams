@@ -38,7 +38,7 @@ export function OrderCountdown() {
       >
         <span className="inline-flex items-center gap-2 flex-wrap justify-center">
           <span className="text-base">🌙</span>
-          Same-day delivery has closed for today &mdash; order now for next-day delivery!
+          Dostava istog dana je zatvorena za danas &mdash; naručite sada za dostavu sutra!
         </span>
       </div>
     );
