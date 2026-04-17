@@ -200,7 +200,7 @@ export function OrderForm() {
 
                 <div className="relative">
                   <select
-                    aria-label="Add a flower"
+                    aria-label="Dodaj cvijet"
                     value=""
                     onChange={(e) => {
                       if (e.target.value) toggleFlower(e.target.value);
@@ -208,7 +208,7 @@ export function OrderForm() {
                     className={inputClass}
                     style={{ ...inputStyle, appearance: "none", paddingRight: "2.5rem" }}
                   >
-                    <option value="">— Select a flower to add —</option>
+                    <option value="">— Odaberite cvijet za dodavanje —</option>
                     {FLOWERS.filter((f) => !selected.includes(f.id)).map((f) => (
                       <option key={f.id} value={f.id}>
                         {f.emoji} {f.name} — €{f.price}
