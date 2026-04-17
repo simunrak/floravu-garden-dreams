@@ -51,7 +51,7 @@ export function OrderCountdown() {
     >
       <div className="inline-flex items-center gap-3 flex-wrap justify-center">
         <span className="text-sm font-medium">
-          Order within the next
+          Naručite u sljedećih
         </span>
         <div className="inline-flex items-center gap-1 font-mono font-bold text-lg">
           <span
@@ -76,7 +76,7 @@ export function OrderCountdown() {
           </span>
         </div>
         <span className="text-sm font-medium">
-          for <strong>same-day delivery!</strong>
+          za <strong>dostavu istog dana!</strong>
         </span>
         <span className="text-base">🌸</span>
       </div>
