@@ -126,12 +126,12 @@ export function OrderForm() {
               {/* Personal Details */}
               <div className="mb-8">
                 <h3 className="font-serif text-xl mb-5" style={{ color: "#3d5a3e" }}>
-                  Your Details
+                  Vaši podaci
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="firstName">
-                      Name *
+                      Ime *
                     </label>
                     <input
                       id="firstName"
@@ -139,14 +139,14 @@ export function OrderForm() {
                       type="text"
                       required
                       maxLength={100}
-                      placeholder="Jane"
+                      placeholder="Ana"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="lastName">
-                      Surname *
+                      Prezime *
                     </label>
                     <input
                       id="lastName"
@@ -154,14 +154,14 @@ export function OrderForm() {
                       type="text"
                       required
                       maxLength={100}
-                      placeholder="Doe"
+                      placeholder="Horvat"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="email">
-                      Email *
+                      E-mail *
                     </label>
                     <input
                       id="email"
@@ -169,14 +169,14 @@ export function OrderForm() {
                       type="email"
                       required
                       maxLength={255}
-                      placeholder="jane@example.com"
+                      placeholder="ana@primjer.hr"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="phone">
-                      Phone Number *
+                      Broj telefona *
                     </label>
                     <input
                       id="phone"
@@ -195,7 +195,7 @@ export function OrderForm() {
               {/* Flower selection */}
               <div className="mb-8">
                 <h3 className="font-serif text-xl mb-5" style={{ color: "#3d5a3e" }}>
-                  Choose Your Flowers *
+                  Odaberite cvijeće *
                 </h3>
 
                 <div className="relative">
