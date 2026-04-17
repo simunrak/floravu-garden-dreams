@@ -15,26 +15,26 @@ export const Route = createFileRoute("/narudzbe")({
 function Narudzbe() {
   return (
     <div>
-      <section className="py-32 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-32 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute top-10 right-20 w-48 h-48 bg-flora-gold/5 rounded-full blur-3xl" />
         <div className="relative max-w-3xl mx-auto text-center">
           <div className="inline-block bg-flora-gold/10 text-flora-gold text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-6 border border-flora-gold/20">
             🛒 Jednostavno i brzo
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl text-flora-forest mb-6">Narudžbe</h1>
-          <p className="text-muted-foreground text-lg font-light leading-relaxed max-w-xl mx-auto">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl text-flora-forest mb-6">Narudžbe</h1>
+          <p className="text-muted-foreground text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto">
             Sve narudžbe zaprimamo putem naših društvenih mreža. Javite nam se na Instagram ili Facebook i dogovorit ćemo sve detalje!
           </p>
         </div>
       </section>
 
-      <section className="pb-24 px-6">
-        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <section className="pb-16 md:pb-24 px-4 sm:px-6">
+        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <a
             href="https://www.instagram.com/flora.vukovar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group glass-card rounded-3xl p-10 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+            className="group glass-card rounded-3xl p-8 sm:p-10 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl min-h-[48px]"
           >
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
               <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -52,7 +52,7 @@ function Narudzbe() {
             href="https://www.facebook.com/profile.php?id=61575743498498"
             target="_blank"
             rel="noopener noreferrer"
-            className="group glass-card rounded-3xl p-10 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+            className="group glass-card rounded-3xl p-8 sm:p-10 text-center hover:scale-105 transition-all duration-500 hover:shadow-2xl min-h-[48px]"
           >
             <div className="w-16 h-16 rounded-2xl bg-[#1877F2] flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-lg">
               <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -68,16 +68,16 @@ function Narudzbe() {
         </div>
       </section>
 
-      <section className="py-20 px-6">
+      <section className="py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-flora-forest text-center mb-16">Kako naručiti?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="font-serif text-2xl sm:text-3xl text-flora-forest text-center mb-10 md:mb-16">Kako naručiti?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {[
               { step: "01", title: "Kontaktirajte nas", desc: "Pošaljite poruku na Instagram ili Facebook s listom željenih biljaka.", emoji: "💬" },
               { step: "02", title: "Potvrda", desc: "Potvrdit ćemo dostupnost i dogovoriti detalje narudžbe.", emoji: "✅" },
               { step: "03", title: "Preuzimanje", desc: "Preuzmite osobno ili odaberite dostavu istog/sljedećeg dana do 15:00.", emoji: "🌿" },
             ].map((item) => (
-              <div key={item.step} className="group text-center glass-card rounded-3xl p-8 hover:scale-105 transition-all duration-500">
+              <div key={item.step} className="group text-center glass-card rounded-3xl p-6 sm:p-8 hover:scale-105 transition-all duration-500">
                 <span className="text-4xl block mb-4 group-hover:scale-125 transition-transform duration-300">{item.emoji}</span>
                 <span className="text-flora-gold/50 font-serif text-sm tracking-widest">{item.step}</span>
                 <h3 className="font-serif text-lg text-flora-forest mt-2 mb-2">{item.title}</h3>
@@ -88,5 +88,6 @@ function Narudzbe() {
         </div>
       </section>
     </div>
+
   );
 }

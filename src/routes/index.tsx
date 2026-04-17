@@ -61,14 +61,11 @@ function Index() {
         <div className="absolute -bottom-40 left-1/3 w-[400px] h-[400px] bg-flora-green/3 rounded-full blur-3xl animate-blob animation-delay-4000" />
       </div>
 
-      {/* Hero — split-screen */}
-      <section ref={heroParallax.ref} className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Hero — static image instead of parallax */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-100"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            transform: `translateY(${heroParallax.offset}px)`,
-          }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-flora-forest/90 via-flora-forest/70 to-flora-forest/30" />
 
@@ -133,11 +130,13 @@ function Index() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow">
-          <span className="text-flora-cream/40 text-xs tracking-widest uppercase">Istražite</span>
-          <svg className="w-5 h-5 text-flora-cream/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-          </svg>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <div className="flex flex-col items-center gap-2 animate-bounce-slow">
+            <span className="text-flora-cream/40 text-xs tracking-widest uppercase">Istražite</span>
+            <svg className="w-5 h-5 text-flora-cream/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
+          </div>
         </div>
       </section>
 

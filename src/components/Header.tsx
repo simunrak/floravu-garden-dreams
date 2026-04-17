@@ -32,9 +32,6 @@ export function Header() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
       }`}
     >
-      {/* Delivery countdown banner */}
-      <DeliveryCountdown />
-
       {/* Main navigation bar */}
       <nav
         className={`transition-all duration-500 ${
@@ -111,6 +108,15 @@ export function Header() {
           </div>
         </div>
       </nav>
+
+      {/* Delivery countdown banner — sits beneath the nav */}
+      <div
+        className={`transition-all duration-500 origin-top overflow-hidden ${
+          scrolled ? "max-h-0 opacity-0" : "max-h-[40px] opacity-100"
+        }`}
+      >
+        <DeliveryCountdown />
+      </div>
     </div>
   );
 }

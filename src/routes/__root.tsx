@@ -75,7 +75,7 @@ function RootComponent() {
   return (
     <>
       <Header />
-      <main className="pt-[104px]">
+      <main className="pt-[96px] sm:pt-[104px]">
         <Outlet />
       </main>
       <Footer />

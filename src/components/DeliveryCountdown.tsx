@@ -42,7 +42,7 @@ export function DeliveryCountdown() {
 
   return (
     <div className="bg-flora-forest text-flora-cream text-center py-1.5 px-4 text-xs font-medium tracking-wide">
-      <span className="inline-flex items-center gap-2">
+      <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
         🌿 Naručite u idućih{" "}
         <span className="bg-flora-cream/15 rounded-full px-2 py-0.5 font-bold tabular-nums text-flora-gold">
           {timeLeft.hours}h {String(timeLeft.minutes).padStart(2, "0")}min
