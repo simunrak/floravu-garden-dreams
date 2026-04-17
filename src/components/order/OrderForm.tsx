@@ -85,13 +85,13 @@ export function OrderForm() {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-4 border"
             style={{ color: "#c9a89a", borderColor: "#c9a89a40", background: "#c9a89a12" }}
           >
-            Place Your Order
+            Pošaljite narudžbu
           </span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4" style={{ color: "#3d5a3e" }}>
-            Order Your Flowers
+            Naručite svoje cvijeće
           </h2>
           <p className="text-base font-light max-w-md mx-auto" style={{ color: "#6b6b5a" }}>
-            Fill in your details, choose your flowers, and we'll be in touch shortly.
+            Ispunite svoje podatke, odaberite cvijeće i javit ćemo vam se uskoro.
           </p>
         </div>
 
@@ -102,17 +102,17 @@ export function OrderForm() {
           >
             <div className="text-6xl mb-6">🌸</div>
             <h3 className="font-serif text-3xl mb-4" style={{ color: "#3d5a3e" }}>
-              Order Received!
+              Narudžba zaprimljena!
             </h3>
             <p className="text-base mb-6" style={{ color: "#6b6b5a" }}>
-              Thank you for your order. We will be in touch shortly to confirm.
+              Hvala vam na narudžbi. Javit ćemo vam se uskoro za potvrdu.
             </p>
             <button
               onClick={() => setStatus("idle")}
               className="px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
               style={{ background: "#3d5a3e", color: "#fff" }}
             >
-              Place Another Order
+              Pošaljite novu narudžbu
             </button>
           </div>
         ) : (
@@ -121,7 +121,7 @@ export function OrderForm() {
             style={{ background: "#fff", border: "1px solid #e8ddd6", boxShadow: "0 8px 40px rgba(0,0,0,0.06)" }}
           >
             <form ref={formRef} onSubmit={handleSubmit} noValidate className="p-8 md:p-12">
-              <input type="hidden" name="_subject" value="New FloraVu Flower Order" />
+              <input type="hidden" name="_subject" value="Nova FloraVu narudžba cvijeća" />
 
               {/* Personal Details */}
               <div className="mb-8">
