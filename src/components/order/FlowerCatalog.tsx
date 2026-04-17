@@ -170,7 +170,7 @@ export function FlowerCatalog({ onAdd, addedIds }: Props) {
                           }
                     }
                   >
-                    {isAdded ? "Added to Order ✓" : "Add to Order"}
+                    {isAdded ? "Dodano u narudžbu ✓" : "Dodaj u narudžbu"}
                   </button>
                 </div>
               </div>
