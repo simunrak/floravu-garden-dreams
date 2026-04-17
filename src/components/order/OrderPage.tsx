@@ -1,25 +1,8 @@
-import { useState } from "react";
 import { OrderNavBar } from "./OrderNavBar";
 import { OrderCountdown } from "./OrderCountdown";
-import { FlowerCatalog, FLOWERS } from "./FlowerCatalog";
-import type { FlowerItem } from "./FlowerCatalog";
 import { OrderForm } from "./OrderForm";
 
 export function OrderPage() {
-  const [selectedFlowers, setSelectedFlowers] = useState<FlowerItem[]>([]);
-
-  const addedIds = new Set(selectedFlowers.map((f) => f.id));
-
-  const handleAdd = (flower: FlowerItem) => {
-    if (!addedIds.has(flower.id)) {
-      setSelectedFlowers((prev) => [...prev, flower]);
-    }
-  };
-
-  const handleRemove = (id: string) => {
-    setSelectedFlowers((prev) => prev.filter((f) => f.id !== id));
-  };
-
   return (
     <div style={{ background: "#faf7f4", minHeight: "100vh", fontFamily: "Inter, system-ui, sans-serif" }}>
       <OrderNavBar />
@@ -27,7 +10,7 @@ export function OrderPage() {
 
       {/* Hero */}
       <section
-        className="pt-32 pb-20 px-6 text-center relative overflow-hidden"
+        className="pb-12 px-6 text-center relative overflow-hidden"
         style={{ paddingTop: "calc(4rem + 3rem + 2.5rem)" }}
       >
         <div
@@ -54,38 +37,12 @@ export function OrderPage() {
             <span style={{ color: "#c9a89a", fontStyle: "italic" }}>Flowers Today</span>
           </h1>
           <p className="text-lg font-light leading-relaxed max-w-lg mx-auto" style={{ color: "#6b6b5a" }}>
-            Hand-crafted bouquets with same-day delivery. Browse our collection, build your order, and leave the rest to us.
+            Hand-crafted bouquets with same-day delivery. Fill out the form below and leave the rest to us.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#collections"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
-              style={{
-                background: "linear-gradient(135deg, #3d5a3e 0%, #5a7a5b 100%)",
-                color: "#faf7f4",
-                boxShadow: "0 6px 30px rgba(61,90,62,0.25)",
-              }}
-            >
-              Browse Collection
-            </a>
-            <a
-              href="#order-form"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-              style={{
-                border: "1.5px solid #c9a89a60",
-                color: "#6b5a50",
-                background: "transparent",
-              }}
-            >
-              Go to Order Form
-            </a>
-          </div>
         </div>
       </section>
 
-      <FlowerCatalog onAdd={handleAdd} addedIds={addedIds} />
-
-      <OrderForm selectedFlowers={selectedFlowers} onRemove={handleRemove} />
+      <OrderForm />
 
       <footer
         className="py-10 px-6 text-center text-sm border-t"
