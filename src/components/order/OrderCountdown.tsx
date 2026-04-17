@@ -38,7 +38,7 @@ export function OrderCountdown() {
       >
         <span className="inline-flex items-center gap-2 flex-wrap justify-center">
           <span className="text-base">🌙</span>
-          Same-day delivery has closed for today &mdash; order now for next-day delivery!
+          Dostava istog dana je zatvorena za danas &mdash; naručite sada za dostavu sutra!
         </span>
       </div>
     );
@@ -51,7 +51,7 @@ export function OrderCountdown() {
     >
       <div className="inline-flex items-center gap-3 flex-wrap justify-center">
         <span className="text-sm font-medium">
-          Order within the next
+          Naručite u sljedećih
         </span>
         <div className="inline-flex items-center gap-1 font-mono font-bold text-lg">
           <span
@@ -76,7 +76,7 @@ export function OrderCountdown() {
           </span>
         </div>
         <span className="text-sm font-medium">
-          for <strong>same-day delivery!</strong>
+          za <strong>dostavu istog dana!</strong>
         </span>
         <span className="text-base">🌸</span>
       </div>

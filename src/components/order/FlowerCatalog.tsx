@@ -13,34 +13,34 @@ export interface FlowerItem {
 export const FLOWERS: FlowerItem[] = [
   {
     id: "midnight-rose",
-    name: "Midnight Rose",
-    description: "Deep crimson roses with velvety petals, perfect for romantic occasions.",
+    name: "Ponoćna ruža",
+    description: "Duboke grimizne ruže baršunastih latica, savršene za romantične prigode.",
     price: "24.99",
     emoji: "🌹",
     image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=400&q=80",
-    tag: "Bestseller",
+    tag: "Najprodavanije",
   },
   {
     id: "spring-whisper",
-    name: "Spring Whisper",
-    description: "Soft pastel tulips in blush and ivory, a breath of fresh spring air.",
+    name: "Proljetni šapat",
+    description: "Nježni pastelni tulipani u boji rumenila i bjelokosti — dašak proljeća.",
     price: "19.99",
     emoji: "🌷",
     image: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=400&q=80",
-    tag: "Seasonal",
+    tag: "Sezonski",
   },
   {
     id: "golden-hour",
-    name: "Golden Hour",
-    description: "Warm sunflowers with lush greenery, radiating joy and warmth.",
+    name: "Zlatni sat",
+    description: "Topli suncokreti s bujnim zelenilom — sjaj radosti i topline.",
     price: "17.99",
     emoji: "🌻",
     image: "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?w=400&q=80",
   },
   {
     id: "ivory-dream",
-    name: "Ivory Dream",
-    description: "Elegant white peonies and gypsophila — timeless and pure.",
+    name: "San od bjelokosti",
+    description: "Elegantne bijele božuri i gipsofila — bezvremenski i čisti.",
     price: "29.99",
     emoji: "🤍",
     image: "https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=400&q=80",
@@ -48,20 +48,20 @@ export const FLOWERS: FlowerItem[] = [
   },
   {
     id: "lavender-mist",
-    name: "Lavender Mist",
-    description: "Fragrant lavender stems mixed with soft purple wildflowers.",
+    name: "Lavandina izmaglica",
+    description: "Mirisne stabljike lavande pomiješane s nježnim ljubičastim poljskim cvijećem.",
     price: "22.99",
     emoji: "💜",
     image: "https://images.unsplash.com/photo-1487530811015-780e99e00bbe?w=400&q=80",
   },
   {
     id: "garden-symphony",
-    name: "Garden Symphony",
-    description: "A vibrant mixed bouquet featuring seasonal blooms in every hue.",
+    name: "Vrtna simfonija",
+    description: "Živopisni miješani buket sa sezonskim cvjetovima u svim nijansama.",
     price: "32.99",
     emoji: "🌺",
     image: "https://images.unsplash.com/photo-1508502726440-477c94bcce5e?w=400&q=80",
-    tag: "New",
+    tag: "Novo",
   },
 ];
 
@@ -81,13 +81,13 @@ export function FlowerCatalog({ onAdd, addedIds }: Props) {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-4 border"
             style={{ color: "#8b9e7c", borderColor: "#8b9e7c40", background: "#8b9e7c12" }}
           >
-            Our Collection
+            Naša kolekcija
           </span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4" style={{ color: "#3d5a3e" }}>
-            Fresh Blooms
+            Svježi cvjetovi
           </h2>
           <p className="text-base font-light max-w-md mx-auto" style={{ color: "#6b6b5a" }}>
-            Each arrangement is hand-crafted with same-day freshness and delivered with care.
+            Svaki aranžman izrađen je ručno i isporučuje se s pažnjom istog dana.
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export function FlowerCatalog({ onAdd, addedIds }: Props) {
                           }
                     }
                   >
-                    {isAdded ? "Added to Order ✓" : "Add to Order"}
+                    {isAdded ? "Dodano u narudžbu ✓" : "Dodaj u narudžbu"}
                   </button>
                 </div>
               </div>

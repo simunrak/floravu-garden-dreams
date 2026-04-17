@@ -23,7 +23,7 @@ export function OrderForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (selected.length === 0) {
-      setErrorMsg("Please select at least one flower.");
+      setErrorMsg("Molimo odaberite barem jedan cvijet.");
       return;
     }
     setErrorMsg("");
@@ -55,12 +55,12 @@ export function OrderForm() {
         const data = await res.json();
         const msg =
           data?.errors?.map((e: { message: string }) => e.message).join(", ") ||
-          "Something went wrong. Please try again.";
+          "Nešto je pošlo po zlu. Molimo pokušajte ponovno.";
         setErrorMsg(msg);
         setStatus("error");
       }
     } catch {
-      setErrorMsg("Network error. Please check your connection and try again.");
+      setErrorMsg("Greška mreže. Provjerite internetsku vezu i pokušajte ponovno.");
       setStatus("error");
     }
   };
@@ -85,13 +85,13 @@ export function OrderForm() {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-4 border"
             style={{ color: "#c9a89a", borderColor: "#c9a89a40", background: "#c9a89a12" }}
           >
-            Place Your Order
+            Pošaljite narudžbu
           </span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4" style={{ color: "#3d5a3e" }}>
-            Order Your Flowers
+            Naručite svoje cvijeće
           </h2>
           <p className="text-base font-light max-w-md mx-auto" style={{ color: "#6b6b5a" }}>
-            Fill in your details, choose your flowers, and we'll be in touch shortly.
+            Ispunite svoje podatke, odaberite cvijeće i javit ćemo vam se uskoro.
           </p>
         </div>
 
@@ -102,17 +102,17 @@ export function OrderForm() {
           >
             <div className="text-6xl mb-6">🌸</div>
             <h3 className="font-serif text-3xl mb-4" style={{ color: "#3d5a3e" }}>
-              Order Received!
+              Narudžba zaprimljena!
             </h3>
             <p className="text-base mb-6" style={{ color: "#6b6b5a" }}>
-              Thank you for your order. We will be in touch shortly to confirm.
+              Hvala vam na narudžbi. Javit ćemo vam se uskoro za potvrdu.
             </p>
             <button
               onClick={() => setStatus("idle")}
               className="px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
               style={{ background: "#3d5a3e", color: "#fff" }}
             >
-              Place Another Order
+              Pošaljite novu narudžbu
             </button>
           </div>
         ) : (
@@ -121,17 +121,17 @@ export function OrderForm() {
             style={{ background: "#fff", border: "1px solid #e8ddd6", boxShadow: "0 8px 40px rgba(0,0,0,0.06)" }}
           >
             <form ref={formRef} onSubmit={handleSubmit} noValidate className="p-8 md:p-12">
-              <input type="hidden" name="_subject" value="New FloraVu Flower Order" />
+              <input type="hidden" name="_subject" value="Nova FloraVu narudžba cvijeća" />
 
               {/* Personal Details */}
               <div className="mb-8">
                 <h3 className="font-serif text-xl mb-5" style={{ color: "#3d5a3e" }}>
-                  Your Details
+                  Vaši podaci
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="firstName">
-                      Name *
+                      Ime *
                     </label>
                     <input
                       id="firstName"
@@ -139,14 +139,14 @@ export function OrderForm() {
                       type="text"
                       required
                       maxLength={100}
-                      placeholder="Jane"
+                      placeholder="Ana"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="lastName">
-                      Surname *
+                      Prezime *
                     </label>
                     <input
                       id="lastName"
@@ -154,14 +154,14 @@ export function OrderForm() {
                       type="text"
                       required
                       maxLength={100}
-                      placeholder="Doe"
+                      placeholder="Horvat"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="email">
-                      Email *
+                      E-mail *
                     </label>
                     <input
                       id="email"
@@ -169,14 +169,14 @@ export function OrderForm() {
                       type="email"
                       required
                       maxLength={255}
-                      placeholder="jane@example.com"
+                      placeholder="ana@primjer.hr"
                       className={inputClass}
                       style={inputStyle}
                     />
                   </div>
                   <div>
                     <label className={labelClass} style={labelStyle} htmlFor="phone">
-                      Phone Number *
+                      Broj telefona *
                     </label>
                     <input
                       id="phone"
@@ -195,12 +195,12 @@ export function OrderForm() {
               {/* Flower selection */}
               <div className="mb-8">
                 <h3 className="font-serif text-xl mb-5" style={{ color: "#3d5a3e" }}>
-                  Choose Your Flowers *
+                  Odaberite cvijeće *
                 </h3>
 
                 <div className="relative">
                   <select
-                    aria-label="Add a flower"
+                    aria-label="Dodaj cvijet"
                     value=""
                     onChange={(e) => {
                       if (e.target.value) toggleFlower(e.target.value);
@@ -208,7 +208,7 @@ export function OrderForm() {
                     className={inputClass}
                     style={{ ...inputStyle, appearance: "none", paddingRight: "2.5rem" }}
                   >
-                    <option value="">— Select a flower to add —</option>
+                    <option value="">— Odaberite cvijet za dodavanje —</option>
                     {FLOWERS.filter((f) => !selected.includes(f.id)).map((f) => (
                       <option key={f.id} value={f.id}>
                         {f.emoji} {f.name} — €{f.price}
@@ -249,7 +249,7 @@ export function OrderForm() {
                               onClick={() => toggleFlower(id)}
                               className="w-6 h-6 rounded-full flex items-center justify-center text-xs transition-all hover:scale-110"
                               style={{ background: "#ede4dc", color: "#8a6a5a" }}
-                              aria-label={`Remove ${f.name}`}
+                              aria-label={`Ukloni ${f.name}`}
                             >
                               ×
                             </button>
@@ -261,7 +261,7 @@ export function OrderForm() {
                       className="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold mt-3"
                       style={{ background: "#8b9e7c15", border: "1px solid #8b9e7c30" }}
                     >
-                      <span style={{ color: "#3d5a3e" }}>Total</span>
+                      <span style={{ color: "#3d5a3e" }}>Ukupno</span>
                       <span style={{ color: "#3d5a3e" }}>€{totalPrice.toFixed(2)}</span>
                     </div>
                   </div>
@@ -271,14 +271,14 @@ export function OrderForm() {
               {/* Optional note */}
               <div className="mb-10">
                 <label className={labelClass} style={labelStyle} htmlFor="note">
-                  Additional Notes (optional)
+                  Dodatne napomene (neobavezno)
                 </label>
                 <textarea
                   id="note"
                   name="note"
                   rows={3}
                   maxLength={1000}
-                  placeholder="Delivery address, card message, special requests..."
+                  placeholder="Adresa dostave, poruka na čestitki, posebne želje..."
                   className={inputClass}
                   style={{ ...inputStyle, resize: "none" }}
                 />
@@ -306,11 +306,11 @@ export function OrderForm() {
                   boxShadow: "0 6px 30px rgba(61,90,62,0.3)",
                 }}
               >
-                {status === "sending" ? "Sending..." : "Order Now"}
+                {status === "sending" ? "Šaljem..." : "Naruči odmah"}
               </button>
 
               <p className="text-xs text-center mt-4" style={{ color: "#9a8a80" }}>
-                Your order will be sent to our team. We'll confirm within 30 minutes.
+                Vaša narudžba bit će poslana našem timu. Potvrdit ćemo unutar 30 minuta.
               </p>
             </form>
           </div>

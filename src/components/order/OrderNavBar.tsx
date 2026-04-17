@@ -13,10 +13,10 @@ export function OrderNavBar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/galerija", label: "Collections" },
-    { href: "/order", label: "Order Now", active: true },
-    { href: "/radno-vrijeme", label: "Contact" },
+    { href: "/", label: "Početna" },
+    { href: "/galerija", label: "Galerija" },
+    { href: "/order", label: "Naručite", active: true },
+    { href: "/radno-vrijeme", label: "Kontakt" },
   ];
 
   return (
@@ -59,7 +59,7 @@ export function OrderNavBar() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col items-center justify-center gap-[5px] w-9 h-9 rounded-lg hover:bg-[#8b9e7c]/10 transition-colors"
-          aria-label="Toggle menu"
+          aria-label="Otvori izbornik"
         >
           <span className={`block w-[18px] h-[1.5px] bg-[#3d5a3e] rounded-full transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
           <span className={`block w-[18px] h-[1.5px] bg-[#3d5a3e] rounded-full transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
