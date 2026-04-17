@@ -84,7 +84,7 @@ function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
-                to="/narudzbe"
+                to="/order"
                 className="group inline-flex items-center justify-center bg-flora-gold text-flora-forest px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:bg-flora-cream hover:scale-105 transition-all duration-300 shadow-lg shadow-flora-gold/30"
               >
                 Naručite danas

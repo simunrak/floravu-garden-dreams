@@ -7,7 +7,7 @@ const navLinks = [
   { to: "/" as const, label: "Početna" },
   { to: "/o-nama" as const, label: "O nama" },
   { to: "/radno-vrijeme" as const, label: "Radno vrijeme" },
-  { to: "/narudzbe" as const, label: "Narudžbe" },
+  { to: "/order" as const, label: "Narudžbe" },
   { to: "/galerija" as const, label: "Galerija" },
 ];
 
