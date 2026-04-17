@@ -81,13 +81,13 @@ export function FlowerCatalog({ onAdd, addedIds }: Props) {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-4 border"
             style={{ color: "#8b9e7c", borderColor: "#8b9e7c40", background: "#8b9e7c12" }}
           >
-            Our Collection
+            Naša kolekcija
           </span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4" style={{ color: "#3d5a3e" }}>
-            Fresh Blooms
+            Svježi cvjetovi
           </h2>
           <p className="text-base font-light max-w-md mx-auto" style={{ color: "#6b6b5a" }}>
-            Each arrangement is hand-crafted with same-day freshness and delivered with care.
+            Svaki aranžman izrađen je ručno i isporučuje se s pažnjom istog dana.
           </p>
         </div>
 
