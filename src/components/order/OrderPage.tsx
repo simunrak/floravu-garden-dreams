@@ -26,18 +26,18 @@ export function OrderPage() {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6 border"
             style={{ color: "#8b9e7c", borderColor: "#8b9e7c40", background: "#8b9e7c12" }}
           >
-            Fresh from the garden
+            Svježe iz vrta
           </span>
           <h1
             className="font-serif text-5xl md:text-7xl mb-6 leading-tight"
             style={{ color: "#3d5a3e" }}
           >
-            Send Someone
+            Pošaljite nekome
             <br />
-            <span style={{ color: "#c9a89a", fontStyle: "italic" }}>Flowers Today</span>
+            <span style={{ color: "#c9a89a", fontStyle: "italic" }}>cvijeće danas</span>
           </h1>
           <p className="text-lg font-light leading-relaxed max-w-lg mx-auto" style={{ color: "#6b6b5a" }}>
-            Hand-crafted bouquets with same-day delivery. Fill out the form below and leave the rest to us.
+            Ručno izrađeni buketi s dostavom istog dana. Ispunite obrazac u nastavku, a mi ćemo se pobrinuti za ostalo.
           </p>
         </div>
       </section>
@@ -50,7 +50,7 @@ export function OrderPage() {
       >
         <p>
           <span className="font-serif text-base" style={{ color: "#3d5a3e" }}>Floravu</span>
-          {" "}&mdash; Gradska Tržnica Vukovar &mdash; All rights reserved © {new Date().getFullYear()}
+          {" "}&mdash; Gradska Tržnica Vukovar &mdash; Sva prava pridržana © {new Date().getFullYear()}
         </p>
       </footer>
     </div>
