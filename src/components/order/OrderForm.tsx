@@ -249,7 +249,7 @@ export function OrderForm() {
                               onClick={() => toggleFlower(id)}
                               className="w-6 h-6 rounded-full flex items-center justify-center text-xs transition-all hover:scale-110"
                               style={{ background: "#ede4dc", color: "#8a6a5a" }}
-                              aria-label={`Remove ${f.name}`}
+                              aria-label={`Ukloni ${f.name}`}
                             >
                               ×
                             </button>
@@ -261,7 +261,7 @@ export function OrderForm() {
                       className="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold mt-3"
                       style={{ background: "#8b9e7c15", border: "1px solid #8b9e7c30" }}
                     >
-                      <span style={{ color: "#3d5a3e" }}>Total</span>
+                      <span style={{ color: "#3d5a3e" }}>Ukupno</span>
                       <span style={{ color: "#3d5a3e" }}>€{totalPrice.toFixed(2)}</span>
                     </div>
                   </div>
